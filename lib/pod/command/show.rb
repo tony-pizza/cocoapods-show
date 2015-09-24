@@ -30,10 +30,12 @@ module Pod
             pod = pod.keys.first if pod.is_a?(Hash)
             next if filter && pod.scan(filter).empty?
             pod_name, version = Specification.name_and_version_from_string(pod)
-            pod_source = config_hash['CHECKOUT OPTIONS'][pod_name]
-            if pod_source && pod_source[:commit]
-              git_version = pod_source[:commit][0,7]
-              version = "#{version} #{git_version}"
+            if config_hash['CHECKOUT OPTIONS']
+              pod_source = config_hash['CHECKOUT OPTIONS'][pod_name]
+              if pod_source && pod_source[:commit]
+                git_version = pod_source[:commit][0,7]
+                version = "#{version} #{git_version}"
+              end
             end
             UI.puts "  * #{pod_name} (#{version})"
           end
