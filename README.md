@@ -7,12 +7,19 @@ For fans of Bundler's `bundle list`.
 
 ## Installation
 
-`$ gem install cocoapods-show`
+```
+$ gem install cocoapods-show
+```
 
 ## Usage
 
 ```
 $ pod show
+```
+
+Output:
+
+```
 Installed pods:
   * AWSCore (2.2.5)
   * AWSS3 (2.2.5)
@@ -20,10 +27,15 @@ Installed pods:
   ...
 ```
 
-Or filter:
+### Or filter:
 
 ```
 $ pod show AWS
+```
+
+Output:
+
+```
 Installed pods:
   * AWSCore (2.2.5)
   * AWSS3 (2.2.5)
