@@ -36,7 +36,7 @@ $ pod show AWS
 Output:
 
 ```
-Installed pods:
+Installed pods matching 'AWS':
   * AWSCore (2.2.5)
   * AWSS3 (2.2.5)
 ```
